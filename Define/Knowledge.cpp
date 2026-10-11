@@ -1,10 +1,10 @@
-
+#include< "WB.h"
 #include <iostream>
 #include <fstream>
 #include <map>
 #include <string>
 
-void Mini_AI::saveKnowledge(const std::string& filename, const std::map<std::string, std::string>& dictionary) {
+void Mini_AI::saveKnowledge(const std::string& filename, const std::map<std::string>& dictionary) {
     std::ofstream outFile(filename);
     if (!outFile) {
         std::cerr << "Error opening file for writing: " << filename << std::endl;
@@ -16,7 +16,7 @@ void Mini_AI::saveKnowledge(const std::string& filename, const std::map<std::str
     outFile.close();
 }
 
-void Mini_AI::loadKnowledge(const std::string& filename, std::map<std::string, std::string>& dictionary) {
+void Mini_AI::loadKnowledge(const std::string& filename, std::map<std::string>& dictionary) {
     std::ifstream inFile(filename);
     if (!inFile) {
         std::cerr << "Error opening file for reading: " << filename << std::endl;
