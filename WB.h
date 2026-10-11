@@ -31,11 +31,10 @@ public:
     //training (Pending)
     void ai_train(int epohs, double lr);
 
-    //file systemV (Pending)
-    void File_SAVETOTXT(const std::string& filename, int AIstate); //AI state will be 0 or 1. 0 for off and 1 for on
-    void File_LOADFROMTXT(const std::string& filename, int AIstate); //change the AI state.
-
-    //LifeCycle
+    //file systemV (DONE)
+    void File_saveKnowledge(const std::string& filename, const std::map<std::string>& dictionary); //Save the knowledge
+    void File_loadKnowledge(const std::string& filename, std::map<std::string>& dictionary); //Load Knowledge
+    //LifeCycle (Pending maybe)
     void Instance_ai_create();
     void Instance_ai_destroy();
 
@@ -98,4 +97,3 @@ private:
 };
 
 #endif AI_CORE_H
-        
