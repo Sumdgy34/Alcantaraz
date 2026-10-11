@@ -28,7 +28,9 @@ public:
         seed = 0; // Random seed for reproducability
         LastError = "404 nothing to see here!"; // Log the last error
     }
-
+    ~Mini_AI();
+     
+ 
     //training (Pending)
     void ai_train(int epohs, double lr);
 
