@@ -1,21 +1,21 @@
 #include "WB.h"
 //Setters
-void Mini_AI::ai_set_threshold(double& threshold)
+void Mini_AI::setThreshold(double& threshold)
 {
     this->threshold = threshold;
 }
 
-void Mini_AI::ai_set_fallBack(const std::string& fallBack)
+void Mini_AI::setFallBack(const std::string& fallBack)
 {
   this->fallBack = fallBack;
 }
 
-void Mini_AI::ai_set_verbose(bool verbose)
+void Mini_AI::setVerbose(bool verbose)
 {
   this->verbose = verbose;
 }
 
-void Mini_AI::ai_set_seed(int seed)
+void Mini_AI::setSeed(int seed)
 {
   this->seed = seed;
 }
