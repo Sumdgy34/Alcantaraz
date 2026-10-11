@@ -4,6 +4,17 @@
 
 void Mini_AI::ai_train(int epohs, double lr)
 {
+    //clearing the vectors
+    inputs.clear();
+    outputs.clear();
+    weights.clear();
+    numericInputs.clear();
+    numericOutputs.clear();
+    numExamples = 0;
+    numResponses = 0;
+    epohsRun = 0;
+
+    //String training
     
                   
         
