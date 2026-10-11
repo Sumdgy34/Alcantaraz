@@ -1,25 +1,25 @@
 #include "WB.h"  
 
-bool Mini_AI::ai_is_trained() {
+bool Mini_AI::isTrained() {
     return is_trained;
 }
 
-int Mini_AI::ai_num_examples()
+int Mini_AI::numExamples()
 {
     return numExamples;
 }
 
-int Mini_AI::ai_num_responses()
+int Mini_AI::numResponses()
 {
     return numResponses;
 }
 
-int Mini_AI::ai_vocab_size()
+int Mini_AI::vocabSize()
 {
     return sizeOfVocab;
 }
 
-int Mini_AI::last_error()
+int Mini_AI::lastError()
 {
     return lastErrorValue;
 }
