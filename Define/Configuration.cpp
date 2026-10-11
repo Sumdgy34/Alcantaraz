@@ -7,7 +7,7 @@ void Mini_AI::ai_set_threshold(double& threshold)
 
 void Mini_AI::ai_set_fallBack(const std::string& fallBack)
 {
-  this->fallBack = falBack;
+  this->fallBack = fallBack;
 }
 
 void Mini_AI::ai_set_verbose(bool verbose)
