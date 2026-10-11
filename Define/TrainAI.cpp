@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-void Mini_AI::ai_train(int epohs, double lr)
+void Mini_AI::aiTrain(int epohs, double lr)
 {
     //clearing the vectors
     inputs.clear();
