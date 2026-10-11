@@ -13,7 +13,7 @@ public:
     Mini_AI()
     {
         //AI state
-        is_Trained = false; // Is the AI trained?
+        is_trained = false; // Is the AI trained?
         last_Confidence = 0.0; // Confidence score from last reply
         threshold  = 0.0; // Minimum Confidence before fallback
         fallBack = "NULLSTRING"; // Default reply if confidence too low
@@ -28,15 +28,13 @@ public:
         seed = 0; // Random seed for reproducability
         LastError = "404 nothing to see here!"; // Log the last error
     }
-    ~Mini_AI();
-     
- 
+      
     //training (Pending)
     void ai_train(int epohs, double lr);
 
     //file systemV (DONE)
-    void File_saveKnowledge(const std::string& filename, const std::map<std::string, std::string>& dictionary); //Save the knowledge
-    void File_loadKnowledge(const std::string& filename, std::map<std::string, std::string>& dictionary); //Load Knowledge
+    void saveKnowledge(const std::string& filename, const std::map<std::string, std::string>& dictionary); //Save the knowledge
+    void loadKnowledge(const std::string& filename, std::map<std::string, std::string>& dictionary); //Load Knowledge
 
     //LifeCycle (Pending maybe)
     void Instance_ai_create();
@@ -59,8 +57,8 @@ public:
     void ai_num_examples();
     void ai_num_responses();
     void ai_vocab_size();
-    void ai_is_trained();
-    void ai_last_error();
+    bool ai_is_trained();
+    int last_error();
 
     //Helper Functions (DONE)
     double math_forward(const std::vector<double>& input);
@@ -101,4 +99,4 @@ private:
     double lastErrorValue; // most recent loss of value
 };
 
-#endif AI_CORE_H
+#endif
