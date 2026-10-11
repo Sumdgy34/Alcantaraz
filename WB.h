@@ -30,35 +30,32 @@ public:
     }
       
     //training (Pending)
-    void ai_train(int epohs, double lr);
+    void aiTrain(int epohs, double lr);
 
     //file systemV (DONE)
-    void saveKnowledge(const std::string& filename, const std::map<std::string, std::string>& dictionary); //Save the knowledge
-    void loadKnowledge(const std::string& filename, std::map<std::string, std::string>& dictionary); //Load Knowledge
+    void fileSaveKnowledge(const std::string& filename, const std::map<std::string, std::string>& dictionary); //Save the knowledge
+    void fileLoadKnowledge(const std::string& filename, std::map<std::string, std::string>& dictionary); //Load Knowledge
 
-    //LifeCycle (Pending maybe)
-    void Instance_ai_create();
-    void Instance_ai_destroy();
 
     //Data Management (PENDING 2 functions)
-    void ai_reply(const std::vector<double>& input);
-    void ai_last_Confidence();
-    void ai_accuracy(const std::vector<double>& expectedOutputs);
-    void ai_reply_string(const std::string& input); //pending
-    void ai_reply_numeric(const int& input); //pending
+    void aiReply(const std::vector<double>& input);
+    void aiLastConfidence();
+    void aiAccuracy(const std::vector<double>& expectedOutputs);
+    void aiReplyString(const std::string& input); //pending
+    void aiReplyNumeric(const int& input); //pending
 
     //Configuration (DONE)
-    void ai_set_threshold(double& threshold);
-    void ai_set_fallBack(const std::string& fallBack);
-    void ai_set_verbose(bool verbose);
-    void ai_set_seed(int seed);
+    void setThreshold(double& threshold);
+    void setFallBack(const std::string& fallBack);
+    void setVerbose(bool verbose);
+    void setSeed(int seed);
 
     //Statistics (DONE)
-    void ai_num_examples();
-    void ai_num_responses();
-    void ai_vocab_size();
-    bool ai_is_trained();
-    int last_error();
+    void numExamples();
+    void numResponses();
+    void vocabSize();
+    bool isTrained();
+    int lastError();
 
     //Helper Functions (DONE)
     double math_forward(const std::vector<double>& input);
