@@ -32,8 +32,9 @@ public:
     void ai_train(int epohs, double lr);
 
     //file systemV (DONE)
-    void File_saveKnowledge(const std::string& filename, const std::map<std::string>& dictionary); //Save the knowledge
-    void File_loadKnowledge(const std::string& filename, std::map<std::string>& dictionary); //Load Knowledge
+    void File_saveKnowledge(const std::string& filename, const std::map<std::string, std::string>& dictionary); //Save the knowledge
+    void File_loadKnowledge(const std::string& filename, std::map<std::string, std::string>& dictionary); //Load Knowledge
+
     //LifeCycle (Pending maybe)
     void Instance_ai_create();
     void Instance_ai_destroy();
