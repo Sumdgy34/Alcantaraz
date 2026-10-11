@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 
 class Mini_AI
 {
@@ -71,9 +72,10 @@ private:
     std::vector<std::string> inputs;
     std::vector<std::string> outputs;
     std::vector<double> weights; // Adjustable parameters for input feature
-    std::vector<std::vector<double>> numericInputs; //Each training example as a vector of numbers
+    std::vector<std::vector<double>> numericInputs; // Each training example as a vector of numbers
     std::vector<double> numericOutputs; // Expected Numeric Results
     double bias; // Predctions
+    std::map<std::string, std::string> dictionary; // Storing vocabulary
 
     //AI training
     double learningRate; // Updates
